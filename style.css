@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff8ee;
+}
+.sidebar {
+    background-color: #F1E0C5;
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    color: #342A21;
+    box-shadow: 3px 0px 15px #342A21;
+}
+#console {
+    padding: 15px;
+
+}
+
+#console p {
+    border-bottom: 1px solid #342A21;
+    padding: 15px 5px 15px 5px;
+    font-size: 1.3em;
+    font-family: 'Merriweather', serif;
+}
+
+.tchat {
+    margin: 0 15px 0 calc(15% + 15px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#state {
+    background-color: #8ac926;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #342A21;
+    display: inline-block;
+}
+#state_text {
+    display: inline-block;
+    padding: 8px 0 0 8px;
+}
+.mother {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.tchat button {
+    padding: 5px 15px 5px 15px;
+    font-weight: bold;
+    width: 100px;
+}
+
+#logo {
+    position: relative;
+    margin: 15px 35px 0 35px;
+    font-family: 'Pacifico', cursive;
+    line-height: 25px;
+}
+
+#text-tchat {
+    position: absolute;
+    margin-top: 40px;
+    height: calc(100% - 87px - 40px);
+    width: calc(85% - 15px - 15px - 25px);
+    padding: 25px 0 0 25px;
+    
+}
+
+#text-tchat p {
+    border: 2px solid #342A21;
+    border-radius: 2px;
+    padding: 15px;
+    margin-right: 25px;
+    font-size: 1.2em;
+}
+
+#text-tchat-2 {
+    position: absolute;
+    margin-top: 120px;
+    height: calc(100% - 87px - 40px);
+    width: calc(85% - 15px - 15px - 25px);
+    padding: 25px 0 0 25px;
+    
+}
+
+#text-tchat-2 p {
+    border: 2px solid #342A21;
+    border-radius: 2px;
+    padding: 15px;
+    margin-right: 25px;
+    font-size: 1.2em;
+}

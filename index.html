@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>ia test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2 id="logo">Home <br> Bot</h2>
+            
+        <div id="console">
+        </div>
+    </div>
+    <div class="tchat">
+        <div class="mother"><div id="state" onclick="stateFunction()">  </div> <div id="state_text">On</div></div>
+        <div id="text-tchat">
+            
+        </div>
+        <div id="text-tchat-2">
+            
+        </div>
+    </div>
+    <script src="commands.js"></script>
+    <script src="annyang.min.js"></script>
+    <script>
+        if (annyang) {
+            //variables
+            var state = true;
+
+
+            //initiation
+            annyang.setLanguage('fr-FR');
+
+
+            // annyang.addCommands(debug());
+            annyang.addCommands(commands);
+
+            annyang.start({ autoRestart: true });
+
+
+            //console
+            annyang.debug([newState = true]);
+
+
+            //afficher console dans div
+            annyang.addCallback('result',function(whatWasHeard) {
+                document.getElementById("console").innerHTML = '<p>' + whatWasHeard[0] + '</p>';
+            });
+
+            function stateFunction() {
+                
+                
+                if(typeof state === 'boolean' && state === true) {
+                    document.getElementById("state").style.backgroundColor = "#ff595e";
+                    state = false
+                    document.getElementById("state_text").innerHTML = 'Off';
+                    console.log(state)
+                }
+                else {
+
+                document.getElementById("state").style.backgroundColor = "#8ac926";
+                state = true
+                document.getElementById("state_text").innerHTML = 'On';
+                console.log(state)
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
